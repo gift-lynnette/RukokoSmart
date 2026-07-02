@@ -1,0 +1,2440 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Berwick Drinks - Berwick Manor</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#d46211",
+              "background-light": "#f8f7f6",
+              "background-dark": "#221810",
+            },
+            fontFamily: {
+              display: ["Epilogue"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-background-dark bg-black font-display text-gray-800 dark:text-gray-200"
+  >
+    <div class="relative flex h-auto min-h-screen w-full flex-col">
+      <!-- Header -->
+      <header class="relative w-full z-20 bg-black">
+        <div class="container mx-auto px-4">
+          <div
+            class="flex items-center justify-between py-4 border-b border-stone-200/10 dark:border-stone-800"
+          >
+            <a class="flex items-center gap-2" href="#">
+              <img class="h-12 w-12" src="images/Logo orange.png" alt="Logo" />
+              <h2 class="text-xl font-bold text-white">Berwick Manor</h2>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-white">
+              <a
+                class="text-sm font-medium hover:text-primary"
+                href="index.html"
+                >Home</a
+              ><a
+                class="text-sm font-medium hover:text-primary"
+                href="menu.html"
+                >Menu</a
+              >
+
+              <a
+                class="text-sm font-medium hover:text-primary"
+                href="gallery.php"
+                >Gallery</a
+              >
+              <a
+                class="text-sm font-medium hover:text-primary"
+                href="reservations.html"
+                >Contact</a
+              >
+            </nav>
+            <div class="flex items-center gap-4">
+              <a
+                class="border px-12 py-2 text-sm font-bold shadow-lg transition-all hover:bg-[#F7941D]"
+                href="reservations.html"
+                style="border-color: #f7941d"
+              >
+                Book Now
+              </a>
+
+              <button id="menuToggle" class="md:hidden p-2">
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 6h16M4 12h16m-7 6h7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav
+        id="mobileMenu"
+        class="md:hidden hidden bg-black text-white p-6 space-y-4 absolute top-[72px] left-0 w-full z-30 transition-all duration-300 ease-in-out transform opacity-0 -translate-y-5"
+      >
+        <a
+          class="block text-sm font-medium hover:text-primary"
+          href="index.html"
+          >Home</a
+        >
+        <a class="block text-sm font-medium hover:text-primary" href="menu.html"
+          >Menu</a
+        >
+
+        <a
+          class="block text-sm font-medium hover:text-primary"
+          href="gallery.html"
+          >Gallery</a
+        >
+        <a
+          class="block text-sm font-medium hover:text-primary"
+          href="reservations.html"
+          >Contact</a
+        >
+      </nav>
+      <!-- Hero Section -->
+      <section
+        class="relative h-[70vh] flex items-center justify-center text-center"
+        style="
+          background-image: url('img/1.jpg');
+          background-size: cover;
+          background-position: center;
+        "
+        data-aos="fade-up"
+      >
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative z-10 max-w-3xl px-6">
+          <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-4">
+            Berwick Drinks
+          </h1>
+          <p class="text-lg md:text-xl text-gray-200">
+            Refreshing beverages for every taste
+          </p>
+        </div>
+      </section>
+
+      <!-- Drinks Content -->
+      <main class="flex flex-1 justify-center py-10 sm:py-16">
+        <div class="w-full max-w-6xl px-4 sm:px-6" data-aos="fade-up">
+          <!-- HOT DRINKS -->
+          <h2
+            class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center mt-12"
+          >
+            Hot Drinks
+          </h2>
+          <div class="mt-12 grid gap-8 md:grid-cols-2">
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/coffee.png"
+                  alt="Cappuccino"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Cappuccino
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Delicious espresso with steamed milk and foam.
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £3.30
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/vanilla.jpg"
+                  alt="Latte"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Latte (Vanilla, Caramel)
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Creamy latte with a hint of flavored syrup.
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £3.30
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/americano.webp"
+                  alt="Latte"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Americano
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Smooth espresso topped with hot water for a rich, mellow
+                    taste.
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £2.80
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/flat.jpg"
+                  alt="Latte"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Flat White
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Velvety espresso blended with silky steamed milk for a
+                    smooth, creamy taste.
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £2.80
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/matcha.jpg"
+                  alt="Latte"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Matcha Latte
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Finely ground matcha whisked with steamed milk for a smooth,
+                    earthy taste.
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £2.80
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/espresso.jpg"
+                  alt="Latte"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Single Espresso & Double
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    A shot of rich espresso with an intense, full-bodied taste.
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £2/2.50
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/hot-chocolate.webp"
+                  alt="Latte"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Hot Chocolate
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Rich cocoa blended with steamed milk for a smooth,
+                    comforting taste.
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £3.8 (Add Whipped Cream +0.3)
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Flavored syrups (Vanilla, Caramel, Hazelnut, Honey)
+                  </h3>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  +0.3
+                </p>
+              </div>
+            </div>
+            <div>
+              <h4
+                class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+              >
+                Oat, Almond, Coconut Milk – available
+              </h4>
+            </div>
+            <!-- Add other hot drinks following the same structure -->
+          </div>
+
+          <!-- ICED DRINKS -->
+          <h2
+            class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center mt-16"
+          >
+            Iced Drinks
+          </h2>
+          <div class="mt-12 grid gap-8 md:grid-cols-2">
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/icedlatte.jpg"
+                  alt="Iced Latte"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Iced Latte
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Chilled espresso poured over milk and ice for a smooth,
+                    refreshing taste.
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £4.20
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/caramel-latte.jpg"
+                  alt="Iced Latte"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Caramel Iced Latte
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Smooth espresso over ice, blended with milk and sweet
+                    caramel for a creamy, refreshing taste.
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £4.20
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/Spiked-Vanilla-Latte.jpg"
+                  alt="Iced Latte"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Vanilla Iced Latte
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Chilled espresso mixed with milk and vanilla for a smooth,
+                    sweet, refreshing taste.
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £4.20
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/iced-matcha.webp"
+                  alt="Iced Latte"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Iced Matcha Latte
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Finely ground matcha blended with chilled milk and ice for a
+                    smooth, refreshing taste.
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £4.20
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/iced-americano.webp"
+                  alt="Iced Latte"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Iced Americano
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Smooth espresso poured over cold water and ice for a bold,
+                    refreshing taste.
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £4.20
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/iced-mocha.jpg"
+                  alt="Iced Latte"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Iced Mocha
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Chilled espresso mixed with milk, cocoa, and ice for a
+                    smooth, chocolatey taste.
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £4.20
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/icedcap.webp"
+                  alt="Iced Latte"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Iced Cappuccino
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Chilled espresso topped with frothy milk for a smooth,
+                    refreshing taste.
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £4.20
+                </p>
+              </div>
+            </div>
+            <!-- Add other iced drinks similarly -->
+          </div>
+
+          <!-- TEA -->
+          <h2
+            class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center mt-16"
+          >
+            Tea
+          </h2>
+          <div class="mt-12 grid gap-8 md:grid-cols-2">
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/earl-grey.webp"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Earl Grey
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Classic black tea infused with bergamot for a fragrant,
+                    elegant taste.
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £3.30
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/Breakfast-tea.webp"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Breakfast
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Robust black tea with a brisk, full-bodied flavor to start
+                    your day.
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £3.30
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/fresh.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Fresh Mint
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Refreshing mint leaves steeped in hot water for a cooling,
+                    aromatic taste
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £3.30
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/chamomile.webp"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Chamomile
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Delicate chamomile flowers brewed for a calming, floral
+                    taste.
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £3.30
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/pot.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Pot of Tea
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    A generous pot of your favorite tea, brewed fresh for a
+                    smooth, comforting taste.
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £4.50
+                </p>
+              </div>
+            </div>
+            <!-- Add other mocktails similarly -->
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center mt-16"
+          >
+            Fresh Juices
+          </h2>
+          <div class="mt-12 grid gap-8 md:grid-cols-2">
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/orange.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Orange Juice
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £3.30
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/apple.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Apple Juice
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £3.30
+                </p>
+              </div>
+            </div>
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center mt-16"
+          >
+            Soft Drinks
+          </h2>
+          <div class="mt-12 grid gap-8 md:grid-cols-2">
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/fever.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Fever Tree (200ml)
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £4.00
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/tonic.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Tonic / Soda Water / Elderflower
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £4.00
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/soda.png"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Coca Cola / Diet Coke / Sprite / Fanta
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £4.00
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/ginger.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Ginger Beer
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £4.50
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/red bull.webp"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Red Bull
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £4.50
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/stil.webp"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Still / Sparkling Water (Small)
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £3.00
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/stil.webp"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Still / Sparkling Water (Large)
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £4.00
+                </p>
+              </div>
+            </div>
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center mt-16"
+          >
+            Smoothies
+          </h2>
+          <div class="mt-12 grid gap-8 md:grid-cols-2">
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/smoothie.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Tropical (Pineapple, Papaya, Mango)
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £6.00
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/green.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Supergreen (Spinach, Pineapple, Banana, Lime)
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £6.00
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/Mixed-berry.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Mixed Berry (Raspberry, Blueberries, Mango, Apple)
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £6.00
+                </p>
+              </div>
+            </div>
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center mt-16"
+          >
+            Moctails
+          </h2>
+          <div class="mt-12 grid gap-8 md:grid-cols-2">
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/mojitojpg.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Mojito (Classic Or Strawberry)
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £10.00
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/Daiquiri.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Strawberry Daiquiri
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £10.00
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/pashionfruit.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Passionfruit Mocktini
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £6.00
+                </p>
+              </div>
+            </div>
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center mt-16"
+          >
+            Cocktails
+          </h2>
+          <div class="mt-12 grid gap-8 md:grid-cols-2">
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/pornstar.webp"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Pornstar Martini
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £14.00
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/negroni.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Negroni
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £15.00
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/Daiquiri.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Strawberry Daiquiri
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £13.00
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/download.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Mai Tai
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £14.00
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/rum.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Rum Punch
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  Glass £7.00 / Jug £20.00
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/cocktail-tree.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Cocktail Tree (12)
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £144.00
+                </p>
+              </div>
+            </div>
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center mt-16"
+          >
+            Wine
+          </h2>
+          <div class="mt-12 grid gap-8 md:grid-cols-2">
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <!-- Image -->
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/white-wine.jpg"
+                  alt="Red Wine"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <!-- Category Title -->
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4"
+                  >
+                    WHITE WINE
+                  </h3>
+
+                  <!-- Menu Table -->
+                  <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                      <thead>
+                        <tr class="text-gray-600 dark:text-gray-400">
+                          <th class="font-semibold"></th>
+                          <th class="font-semibold">175ml</th>
+                          <th class="font-semibold">250ml</th>
+                          <th class="font-semibold">Bottle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr
+                          class="border-t border-gray-200 dark:border-stone-700"
+                        >
+                          <td
+                            class="py-2 font-semibold text-gray-800 dark:text-gray-100"
+                          >
+                            Chardonnay
+                          </td>
+                          <td class="py-2">6.5</td>
+                          <td class="py-2">7.5</td>
+                          <td class="py-2">21.5</td>
+                        </tr>
+                        <tr
+                          class="border-t border-gray-200 dark:border-stone-700"
+                        >
+                          <td
+                            class="py-2 font-semibold text-gray-800 dark:text-gray-100"
+                          >
+                            Pinot Grigio
+                          </td>
+                          <td class="py-2">7.5</td>
+                          <td class="py-2">8.5</td>
+                          <td class="py-2">24.9</td>
+                        </tr>
+                        <tr
+                          class="border-t border-gray-200 dark:border-stone-700"
+                        >
+                          <td
+                            class="py-2 font-semibold text-gray-800 dark:text-gray-100"
+                          >
+                            Savingnon Blanc
+                          </td>
+                          <td class="py-2">7.5</td>
+                          <td class="py-2">8.5</td>
+                          <td class="py-2">23.9</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <!-- Image -->
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/red-wine.jpg"
+                  alt="Red Wine"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <!-- Category Title -->
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4"
+                  >
+                    RED WINE
+                  </h3>
+
+                  <!-- Menu Table -->
+                  <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                      <thead>
+                        <tr class="text-gray-600 dark:text-gray-400">
+                          <th class="font-semibold"></th>
+                          <th class="font-semibold">175ml</th>
+                          <th class="font-semibold">250ml</th>
+                          <th class="font-semibold">Bottle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr
+                          class="border-t border-gray-200 dark:border-stone-700"
+                        >
+                          <td
+                            class="py-2 font-semibold text-gray-800 dark:text-gray-100"
+                          >
+                            Merlot
+                          </td>
+                          <td class="py-2">7.5</td>
+                          <td class="py-2">8.5</td>
+                          <td class="py-2">22.95</td>
+                        </tr>
+                        <tr
+                          class="border-t border-gray-200 dark:border-stone-700"
+                        >
+                          <td
+                            class="py-2 font-semibold text-gray-800 dark:text-gray-100"
+                          >
+                            Malbec
+                          </td>
+                          <td class="py-2">8</td>
+                          <td class="py-2">9</td>
+                          <td class="py-2">24.9</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <!-- Image -->
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/rose-wine.jpg"
+                  alt="Red Wine"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <!-- Category Title -->
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4"
+                  >
+                    ROSE WINE
+                  </h3>
+
+                  <!-- Menu Table -->
+                  <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                      <thead>
+                        <tr class="text-gray-600 dark:text-gray-400">
+                          <th class="font-semibold"></th>
+                          <th class="font-semibold">175ml</th>
+                          <th class="font-semibold">250ml</th>
+                          <th class="font-semibold">Bottle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr
+                          class="border-t border-gray-200 dark:border-stone-700"
+                        >
+                          <td
+                            class="py-2 font-semibold text-gray-800 dark:text-gray-100"
+                          >
+                            Pinot Grigio
+                          </td>
+                          <td class="py-2">7</td>
+                          <td class="py-2">8.5</td>
+                          <td class="py-2">24</td>
+                        </tr>
+                        <tr
+                          class="border-t border-gray-200 dark:border-stone-700"
+                        >
+                          <td
+                            class="py-2 font-semibold text-gray-800 dark:text-gray-100"
+                          >
+                            White Zinfandel
+                          </td>
+                          <td class="py-2">6.5</td>
+                          <td class="py-2">7.5</td>
+                          <td class="py-2">22.9</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <!-- Image -->
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/spark.jpg"
+                  alt="Red Wine"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <!-- Category Title -->
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4"
+                  >
+                    SPARKLING WINE
+                  </h3>
+
+                  <!-- Menu Table -->
+                  <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                      <thead>
+                        <tr class="text-gray-600 dark:text-gray-400">
+                          <th class="font-semibold"></th>
+
+                          <th class="font-semibold">20cl</th>
+                          <th class="font-semibold">Bottle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr
+                          class="border-t border-gray-200 dark:border-stone-700"
+                        >
+                          <td
+                            class="py-2 font-semibold text-gray-800 dark:text-gray-100"
+                          >
+                            Prosecco
+                          </td>
+                          <td class="py-2">8.5</td>
+
+                          <td class="py-2">27.5</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center mt-16"
+          >
+            Beers
+          </h2>
+          <div class="mt-12 grid gap-8 md:grid-cols-2">
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/perni.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Peroni
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £7.00
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/stella.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Stella
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £5.00
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/corona.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Corona
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £13.00
+                </p>
+              </div>
+            </div>
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center mt-16"
+          >
+            Bottles/Shots
+          </h2>
+
+          <p class="text-center mt-16">
+            (a pitcher of mixer, soft drink/juice is included with all bottles,
+            excluding red bull)
+          </p>
+          <br />
+          <div
+            class="group max-w-3xl mx-auto flex flex-col bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+          >
+            <!-- Image on top -->
+            <div class="overflow-hidden">
+              <img
+                src="images/shots.jpg"
+                alt="Bottles and Shots"
+                class="h-64 w-full object-cover group-hover:scale-110 transition duration-500"
+              />
+            </div>
+
+            <!-- Content -->
+            <div class="p-6">
+              <!-- Title -->
+              <h2
+                class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4 border-b pb-2"
+              >
+                BOTTLES / SHOTS
+              </h2>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                (Single / Double / Bottle)
+              </p>
+
+              <!-- Column Headers -->
+              <div
+                class="grid grid-cols-4 gap-4 text-gray-700 dark:text-gray-300 font-medium mb-2"
+              >
+                <span></span>
+                <span>Single</span>
+                <span>Double</span>
+                <span>Bottle</span>
+              </div>
+
+              <!-- Drinks List -->
+              <div class="space-y-2">
+                <div class="grid grid-cols-4 gap-4 items-center">
+                  <span class="font-semibold">Casamigos</span>
+                  <span>6.5</span>
+                  <span>12</span>
+                  <span>180</span>
+                </div>
+                <div class="grid grid-cols-4 gap-4 items-center">
+                  <span class="font-semibold">Courvoisier</span>
+                  <span>6</span>
+                  <span>10</span>
+                  <span>90</span>
+                </div>
+                <div class="grid grid-cols-4 gap-4 items-center">
+                  <span class="font-semibold">Remy Martin VSOP</span>
+                  <span>9</span>
+                  <span>12</span>
+                  <span>150</span>
+                </div>
+                <div class="grid grid-cols-4 gap-4 items-center">
+                  <span class="font-semibold">Hennessy VS</span>
+                  <span>6</span>
+                  <span>10</span>
+                  <span>150</span>
+                </div>
+                <div class="grid grid-cols-4 gap-4 items-center">
+                  <span class="font-semibold">Jack Daniel’s</span>
+                  <span>5.5</span>
+                  <span>10</span>
+                  <span>95</span>
+                </div>
+                <div class="grid grid-cols-4 gap-4 items-center">
+                  <span class="font-semibold">Wray & Nephew</span>
+                  <span>6</span>
+                  <span>11</span>
+                  <span>120</span>
+                </div>
+                <div class="grid grid-cols-4 gap-4 items-center">
+                  <span class="font-semibold">Captain Morgan (Spiced)</span>
+                  <span>6</span>
+                  <span>11</span>
+                  <span>90</span>
+                </div>
+                <div class="grid grid-cols-4 gap-4 items-center">
+                  <span class="font-semibold">Bacardi Carta Blanca</span>
+                  <span>5.5</span>
+                  <span>10</span>
+                  <span>90</span>
+                </div>
+                <div class="grid grid-cols-4 gap-4 items-center">
+                  <span class="font-semibold">Belvedere Vodka</span>
+                  <span>7</span>
+                  <span>12</span>
+                  <span>100</span>
+                </div>
+                <div class="grid grid-cols-4 gap-4 items-center">
+                  <span class="font-semibold">Cîroc (Flavours)</span>
+                  <span>7</span>
+                  <span>12</span>
+                  <span>100</span>
+                </div>
+                <div class="grid grid-cols-4 gap-4 items-center">
+                  <span class="font-semibold"
+                    >Gin (Hendricks / Bombay / Pink)</span
+                  >
+                  <span>6</span>
+                  <span>12</span>
+                  <span>150</span>
+                </div>
+                <div class="grid grid-cols-4 gap-4 items-center">
+                  <span class="font-semibold">Disaronno</span>
+                  <span>6</span>
+                  <span>10</span>
+                  <span>75</span>
+                </div>
+                <!-- Shot Trays -->
+                <div class="grid grid-cols-4 gap-4 items-center">
+                  <span class="font-semibold">Shot Tray (6)</span>
+                  <span class="col-span-3">36</span>
+                </div>
+                <div class="grid grid-cols-4 gap-4 items-center">
+                  <span class="font-semibold">Shots Tree (12)</span>
+                  <span class="col-span-3">72</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center mt-16"
+          >
+            Tecquila Bottles
+          </h2>
+          <div class="mt-12 grid gap-8 md:grid-cols-2">
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/azul.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Clase Azul
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £300.00
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/don.avif"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Don julio
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £500.00
+                </p>
+              </div>
+            </div>
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center mt-16"
+          >
+            Whiskey
+          </h2>
+          <div class="mt-12 grid gap-8 md:grid-cols-2">
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/jameson.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Jameson
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £120.00
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/images.jpgjohn.jpg"
+                  alt="Mojito"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Johnnie walker Black Label
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £120.00
+                </p>
+              </div>
+            </div>
+          </div>
+          <h2
+            class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center mt-16"
+          >
+            Champagne
+          </h2>
+          <div class="mt-12 grid gap-8 md:grid-cols-2">
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <!-- Image -->
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/laurent.jpg"
+                  alt="Red Wine"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <!-- Category Title -->
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4"
+                  ></h3>
+
+                  <!-- Menu Table -->
+                  <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                      <thead>
+                        <tr class="text-gray-600 dark:text-gray-400">
+                          <th class="font-semibold"></th>
+                          <th class="font-semibold">Glass</th>
+                          <th class="font-semibold">Bottle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr
+                          class="border-t border-gray-200 dark:border-stone-700"
+                        >
+                          <td
+                            class="py-2 font-semibold text-gray-800 dark:text-gray-100"
+                          >
+                            Laurent Perrier Cuvee Rose
+                          </td>
+                          <td class="py-2">18</td>
+                          <td class="py-2">120</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <!-- Image -->
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/veuve.jpg"
+                  alt="Red Wine"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <!-- Category Title -->
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4"
+                  ></h3>
+
+                  <!-- Menu Table -->
+                  <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                      <thead>
+                        <tr class="text-gray-600 dark:text-gray-400">
+                          <th class="font-semibold"></th>
+                          <th class="font-semibold">Glass</th>
+                          <th class="font-semibold">Bottle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr
+                          class="border-t border-gray-200 dark:border-stone-700"
+                        >
+                          <td
+                            class="py-2 font-semibold text-gray-800 dark:text-gray-100"
+                          >
+                            Veuve Cliquot
+                          </td>
+                          <td class="py-2">-</td>
+                          <td class="py-2">150</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <!-- Image -->
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/rose-wine.jpg"
+                  alt="Red Wine"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <!-- Category Title -->
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4"
+                  ></h3>
+
+                  <!-- Menu Table -->
+                  <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                      <thead>
+                        <tr class="text-gray-600 dark:text-gray-400">
+                          <th class="font-semibold"></th>
+                          <th class="font-semibold">Glass</th>
+
+                          <th class="font-semibold">Bottle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr
+                          class="border-t border-gray-200 dark:border-stone-700"
+                        >
+                          <td
+                            class="py-2 font-semibold text-gray-800 dark:text-gray-100"
+                          >
+                            Moet And Chandon Imperial
+                          </td>
+                          <td class="py-2">25</td>
+                          <td class="py-2">120</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <!-- Image -->
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/ace.jpg"
+                  alt="Red Wine"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <!-- Category Title -->
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4"
+                  ></h3>
+
+                  <!-- Menu Table -->
+                  <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                      <thead>
+                        <tr class="text-gray-600 dark:text-gray-400">
+                          <th class="font-semibold"></th>
+
+                          <th class="font-semibold">Glass</th>
+                          <th class="font-semibold">Bottle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr
+                          class="border-t border-gray-200 dark:border-stone-700"
+                        >
+                          <td
+                            class="py-2 font-semibold text-gray-800 dark:text-gray-100"
+                          >
+                            Ace of Spades
+                          </td>
+                          <td class="py-2">-</td>
+                          <td class="py-2">500</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <!-- Image -->
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/dom.jpg"
+                  alt="Red Wine"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <!-- Category Title -->
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4"
+                  ></h3>
+
+                  <!-- Menu Table -->
+                  <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                      <thead>
+                        <tr class="text-gray-600 dark:text-gray-400">
+                          <th class="font-semibold"></th>
+
+                          <th class="font-semibold">Glass</th>
+                          <th class="font-semibold">Bottle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr
+                          class="border-t border-gray-200 dark:border-stone-700"
+                        >
+                          <td
+                            class="py-2 font-semibold text-gray-800 dark:text-gray-100"
+                          >
+                            Dom perignon
+                          </td>
+                          <td class="py-2">-</td>
+                          <td class="py-2">350</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            >
+              <!-- Image -->
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/cristal.jpg"
+                  alt="Red Wine"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <!-- Category Title -->
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4"
+                  ></h3>
+
+                  <!-- Menu Table -->
+                  <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                      <thead>
+                        <tr class="text-gray-600 dark:text-gray-400">
+                          <th class="font-semibold"></th>
+
+                          <th class="font-semibold">Glass</th>
+                          <th class="font-semibold">Bottle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr
+                          class="border-t border-gray-200 dark:border-stone-700"
+                        >
+                          <td
+                            class="py-2 font-semibold text-gray-800 dark:text-gray-100"
+                          >
+                            Louis Roeder Cristal
+                          </td>
+                          <td class="py-2">-</td>
+                          <td class="py-2">350</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Back to Menu -->
+          <div class="mt-12 text-center">
+            <a
+              href="menu.html"
+              class="text-primary font-semibold hover:underline"
+              style="color: #f7941d"
+            >
+              ← Back to Menu
+            </a>
+          </div>
+        </div>
+      </main>
+
+      <footer class="bg-black text-white py-12 px-6 md:px-12">
+        <div
+          class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left"
+        >
+          <!-- Logo + Intro -->
+          <div>
+            <img
+              alt="Berwick Manor Logo"
+              class="h-12 w-12 md:h-14 md:w-14"
+              src="images/Logo white.png"
+            />
+            <br />
+            <h3 class="text-xl font-bold mb-4" style="color: #f7941d">
+              Berwick Manor
+            </h3>
+            <p class="text-gray-400">
+              Experience dining and shisha in a luxurious and unforgettable
+              setting.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-xl font-bold mb-4" style="color: #f7941d">
+              Quick Links
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  href="menu.html"
+                  >Menu</a
+                >
+              </li>
+
+              <li>
+                <a
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  href="gallery.html"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  href="reservations.html"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-xl font-bold mb-4" style="color: #f7941d">
+              Contact Info
+            </h3>
+
+            <!-- Location -->
+            <p class="flex items-start text-gray-400 mb-2">
+              <svg
+                class="h-5 w-5 text-white mr-2 mt-1"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C8.1 2 5 5.1 5 9c0 5.3 7 13 7 13s7-7.7 7-13c0-3.9-3.1-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5s2.5 1.1 2.5 2.5S13.4 11.5 12 11.5z"
+                />
+              </svg>
+              Berwick Manor Restaurant and Shisha Lounge, <br />
+              Berwick Pond Road, Rainham RM13 9EL
+            </p>
+
+            <!-- Email -->
+            <p class="flex items-center text-gray-400 mb-2">
+              <svg
+                class="h-5 w-5 text-white mr-2"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 
+      2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 
+      4-8 5-8-5V6l8 5 8-5v2z"
+                />
+              </svg>
+              <a
+                href="mailto:info@berwickmanorlounge.co.uk"
+                class="hover:text-white"
+              >
+                info@berwickmanorlounge.co.uk
+              </a>
+            </p>
+
+            <!-- Website -->
+            <p class="flex items-center text-gray-400">
+              <svg
+                class="h-5 w-5 text-white mr-2"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.5 2 2 6.5 2 12s4.5 10 
+      10 10 10-4.5 10-10S17.5 2 12 2zm0 
+      18c-4.4 0-8-3.6-8-8s3.6-8 
+      8-8 8 3.6 8 8-3.6 8-8 8zm.5-13h-1v6l5.2 
+      3.1.5-.9-4.7-2.8V7z"
+                />
+              </svg>
+              <a
+                href="http://www.berwickmanorlounge.co.uk"
+                target="_blank"
+                class="hover:text-white"
+              >
+                www.berwickmanorlounge.co.uk
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Bottom -->
+        <div
+          class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-500"
+        >
+          <p>© 2025 Berwick Manor. All Rights Reserved.</p>
+        </div>
+      </footer>
+      <script>
+        const carousel = document.getElementById("menu-carousel");
+        const prevButton = document.querySelector(".carousel-prev");
+        const nextButton = document.querySelector(".carousel-next");
+        nextButton.addEventListener("click", () => {
+          const cardWidth = carousel.querySelector("div").offsetWidth;
+          carousel.scrollBy({ left: cardWidth + 32, behavior: "smooth" }); // 32 is for the space-x-8
+        });
+        prevButton.addEventListener("click", () => {
+          const cardWidth = carousel.querySelector("div").offsetWidth;
+          carousel.scrollBy({ left: -(cardWidth + 32), behavior: "smooth" });
+        });
+      </script>
+      <script>
+        const btn = document.getElementById("menu-btn");
+        const menu = document.getElementById("mobile-menu");
+
+        btn.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+        });
+      </script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          duration: 800,
+          once: false,
+          offset: 50,
+        });
+      </script>
+      <script>
+        const toggleBtn = document.getElementById("menuToggle");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        toggleBtn.addEventListener("click", () => {
+          if (mobileMenu.classList.contains("hidden")) {
+            // show menu with animation
+            mobileMenu.classList.remove("hidden");
+            setTimeout(() => {
+              mobileMenu.classList.remove("opacity-0", "-translate-y-5");
+            }, 10); // tiny delay so transition applies
+          } else {
+            // hide menu with animation
+            mobileMenu.classList.add("opacity-0", "-translate-y-5");
+            mobileMenu.addEventListener(
+              "transitionend",
+              () => {
+                mobileMenu.classList.add("hidden");
+              },
+              { once: true }
+            );
+          }
+        });
+      </script>
+    </div>
+  </body>
+</html>

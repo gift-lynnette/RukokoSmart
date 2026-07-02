@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Berwick Manor Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#F7941D",
+              "background-light": "#f8f7f6",
+              "background-dark": "#000",
+            },
+            fontFamily: {
+              display: ["Epilogue"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Optional fade-in animation */
+      body {
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 0.8s ease;
+      }
+      body.loaded {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .main-content {
+        padding: 20px 0; /* Add vertical padding around the cards */
+        margin-bottom: 150px;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 20px; /* Retains horizontal space (from original gap) */
+        row-gap: 100px; /* Added: Creates 80px of vertical space between rows */
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .container .card {
+        position: relative;
+        cursor: pointer;
+        width: 90%;
+        max-width: 300px;
+        height: 200px;
+      }
+      .container .card {
+        /* Added for mobile touch support */
+        -webkit-tap-highlight-color: transparent;
+      }
+      .container .card .slide.slide1 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transition: 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transform: translateY(100px);
+
+        /* Background Image Setup */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+      }
+        /* Individual Background Image URLs */
+      .card.breakfast .slide.slide1 {
+        background-image: url("images/break.png");
+        width: 300px;
+        background-size: contain; 
+      }
+      .card.dinner .slide.slide1 {
+        background-image: url("images/dinner.png");
+        width: 300px;
+        background-size: contain; 
+      }
+      .card.drinks .slide.slide1 {
+        background-image: url("images/drink.png");
+         background-size: contain; 
+      }
+      
+      .card.shisha .slide.slide1 {
+        background-image: url("images/V2.png");
+        width: 300px;
+        background-size: contain; 
+      }
+
+      .container .card:hover .slide.slide1 {
+        transform: translateY(0px);
+        box-shadow: none;
+      }
+      .slide1 .card-title {
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+      }
+
+      .container .card .icon,
+      .container .card .icon img {
+        display: none;
+      }
+
+      .container .card .slide {
+        width: 100%;
+        height: 100%;
+        transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        border-radius: 15px;
+        overflow: hidden;
+      }
+
+      .container .card .slide.slide2 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        transition: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transform: translateY(-100px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        /* background: white; */
+        border-radius: 0px 0px 15px 15px;
+      }
+
+      .container .card:hover .slide.slide2 {
+        transform: translateY(0);
+        margin-bottom: 200px;
+        z-index: 3;
+      }
+
+      .slide2 .content-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .container .card .slide.slide2 .content p {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .container .card .slide.slide2 .content h3 {
+        margin: 0 0 5px 0;
+        padding: 0;
+        font-size: 24px;
+        color: #f89a20;
+        font-weight: bold;
+      }
+
+      .btn {
+        background: linear-gradient(45deg, #f89a20, #ff6b35);
+        color: #fff;
+        border: none;
+        padding: 8px 18px;
+        border-radius: 25px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: all 0.3s;
+        display: block;
+        margin-top: auto;
+        width: fit-content;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .read-more-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(248, 154, 32, 0.4);
+      }
+
+      /* --- 2 Up / 2 Down Responsiveness --- */
+      @media (min-width: 600px) {
+        .container {
+          gap: 40px;
+          column-gap: 40px; /* Retains horizontal space (from original gap) */
+          row-gap: 120px;
+        }
+        .container .card {
+          flex-basis: calc(50% - 20px);
+          max-width: 400px;
+        }
+      }
+      /* Navigation slide animation for mobile menu */
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Mobile-specific fixes */
+      @media (max-width: 768px) {
+        .container .card {
+          width: 100%;
+          max-width: 100%;
+          margin-bottom: 80px;
+        }
+
+        .container .card.active .slide.slide2 {
+          margin-bottom: 0;
+          transform: translateY(0);
+          height: auto;
+          min-height: 150px;
+        }
+
+        /* Make buttons more tappable on mobile */
+        .btn {
+          padding: 12px 24px;
+          font-size: 1rem;
+        }
+      }
+      /* Added active class for mobile touch support */
+      .container .card:hover .slide.slide1,
+      .container .card.active .slide.slide1 {
+        transform: translateY(0px);
+        box-shadow: none;
+      }
+
+      /* Added active class for mobile touch support */
+      .container .card:hover .slide.slide2,
+      .container .card.active .slide.slide2 {
+        transform: translateY(0);
+        margin-bottom: 200px;
+        z-index: 3;
+      }
+    </style>
+  </head>
+
+  <body class="bg-black text-white font-sans transition-all duration-700">
+    <!-- HEADER -->
+    <header
+      class="relative top-0 left-0 w-full z-20 bg-transparent backdrop-blur-sm"
+    >
+      <div class="mx-auto px-4">
+        <div
+          class="flex items-center justify-between py-4 border-b border-stone-200/10 dark:border-stone-800"
+        >
+          <a class="flex items-center gap-2" href="index.html">
+            <img class="h-12 w-12" src="images/Logo orange.png" alt="Logo" />
+            <h2 class="text-xl font-bold text-white">Berwick Manor</h2>
+          </a>
+          <nav class="hidden md:flex items-center gap-6 text-white">
+            <a class="text-sm font-medium hover:text-primary" href="index.html"
+              >Home</a
+            ><a class="text-sm font-medium hover:text-primary" href="menu.html"
+              >Menu</a
+            >
+
+            <a
+              class="text-sm font-medium hover:text-primary"
+              href="gallery.html"
+              >Gallery</a
+            >
+            <a
+              class="text-sm font-medium hover:text-primary"
+              href="reservations.html"
+              >Contact</a
+            >
+          </nav>
+          <div class="flex items-center gap-4">
+            <a
+              class="border px-12 py-2 text-sm font-bold shadow-lg transition-all hover:bg-[#F7941D]"
+              href="reservations.html"
+              style="border-color: #f7941d"
+            >
+              Book Now
+            </a>
+
+            <button id="menuToggle" class="md:hidden p-2">
+              <svg
+                class="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 6h16M4 12h16m-7 6h7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav
+      id="mobileMenu"
+      class="md:hidden hidden bg-black text-white p-6 space-y-4 absolute top-[72px] left-0 w-full z-30 transition-all duration-300 ease-in-out transform opacity-0 -translate-y-5"
+    >
+      <a class="block text-sm font-medium hover:text-primary" href="index.html"
+        >Home</a
+      >
+      <a class="block text-sm font-medium hover:text-primary" href="menu.html"
+        >Menu</a
+      >
+
+      <a
+        class="block text-sm font-medium hover:text-primary"
+        href="gallery.html"
+        >Gallery</a
+      >
+      <a
+        class="block text-sm font-medium hover:text-primary"
+        href="reservations.html"
+        >Contact</a
+      >
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section
+      class="w-full h-[350px] md:h-[450px] bg-cover bg-center relative flex justify-center items-center"
+      style="background-image: url('img/2.jpg')"
+    >
+      <div class="absolute inset-0 bg-black/50"></div>
+      <h1
+        class="relative z-10 text-4xl md:text-6xl font-bold text-white drop-shadow-lg"
+      >
+        Our Menu
+      </h1>
+    </section>
+
+    <!-- INTRO -->
+    <section class="text-center mt-10">
+      <h1 class="text-4xl md:text-4xl font-bold text-white-500 mb-2">
+        Our Menu
+      </h1>
+      <p class="text-grey-400 max-w-xl mx-auto">
+        Discover our delicious offerings prepared with the freshest ingredients.
+      </p>
+    </section>
+
+    <!-- MENU CARDS -->
+    <div class="main-content">
+      <div class="container">
+        <a href="breakfast.html">
+          <div class="card breakfast">
+            <div class="slide slide1">
+              <div class="content">
+                <span class="card-title">Breakfast Menu</span>
+              </div>
+            </div>
+            <div class="slide slide2">
+              <div class="content">
+                <div class="content-text">
+                  <h3>Breakfast Menu</h3>
+                  <p>
+                    Start your day with our delicious breakfast options, from
+                    fluffy pancakes to savory omelets.
+                  </p>
+                </div>
+                <div class="more">
+                  <a href="breakfast.html" class="btn">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="dinner.html">
+          <div class="card dinner">
+            <div class="slide slide1">
+              <div class="content">
+                <span class="card-title">Dinner Special</span>
+              </div>
+            </div>
+            <div class="slide slide2">
+              <div class="content">
+                <div class="content-text">
+                  <h3>Dinner Special</h3>
+                  <p>
+                    Experience fine dining with our premium menu featuring
+                    seasonal ingredients and chef specialties.
+                  </p>
+                </div>
+                <div class="more">
+                  <a href="dinner.html" class="btn">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a a href="drinks.html">
+          <div class="card drinks">
+            <div class="slide slide1">
+              <div class="content">
+                <span class="card-title">Premium Drinks</span>
+              </div>
+            </div>
+            <div class="slide slide2">
+              <div class="content">
+                <div class="content-text">
+                  <h3>Premium Drinks</h3>
+                  <p>
+                    Handcrafted beverages, specialty cocktails, and a curated
+                    selection of fine wines and spirits.
+                  </p>
+                </div>
+                <div class="more">
+                  <a href="drinks.html" class="btn">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="shisha.html">
+          <div class="card shisha">
+            <div class="slide slide1">
+              <div class="content">
+                <span class="card-title">Shisha Lounge</span>
+              </div>
+            </div>
+            <div class="slide slide2">
+              <div class="content">
+                <div class="content-text">
+                  <h3>Shisha Lounge</h3>
+                  <p>
+                    Relax in our premium shisha lounge experience with a variety
+                    of classic and exotic flavors.
+                  </p>
+                </div>
+                <div class="more">
+                  <a href="shisha.html" class="btn">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-white py-12 px-6 md:px-12">
+      <div
+        class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left"
+      >
+        <!-- Logo + Intro -->
+        <div>
+          <img
+            alt="Berwick Manor Logo"
+            class="h-12 w-12 md:h-14 md:w-14"
+            src="images/Logo white.png"
+          />
+          <br />
+          <h3 class="text-xl font-bold mb-4" style="color: #f7941d">
+            Berwick Manor
+          </h3>
+          <p class="text-gray-400">
+            Experience dining and shisha in a luxurious and unforgettable
+            setting.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-bold mb-4" style="color: #f7941d">
+            Quick Links
+          </h3>
+          <ul class="space-y-2">
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition-colors duration-300"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition-colors duration-300"
+                href="menu.html"
+                >Menu</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition-colors duration-300"
+                href="gallery.html"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition-colors duration-300"
+                href="reservations.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-xl font-bold mb-4" style="color: #f7941d">
+            Contact Info
+          </h3>
+
+          <!-- Location -->
+          <p class="flex items-start text-gray-400 mb-2">
+            <svg
+              class="h-5 w-5 text-white mr-2 mt-1"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C8.1 2 5 5.1 5 9c0 5.3 7 13 7 13s7-7.7 7-13c0-3.9-3.1-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5s2.5 1.1 2.5 2.5S13.4 11.5 12 11.5z"
+              />
+            </svg>
+            Berwick Manor Restaurant and Shisha Lounge, <br />
+            Berwick Pond Road, Rainham RM13 9EL
+          </p>
+
+          <!-- Email -->
+          <p class="flex items-center text-gray-400 mb-2">
+            <svg
+              class="h-5 w-5 text-white mr-2"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 
+      2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 
+      4-8 5-8-5V6l8 5 8-5v2z"
+              />
+            </svg>
+            <a
+              href="mailto:info@berwickmanorlounge.co.uk"
+              class="hover:text-white"
+            >
+              info@berwickmanorlounge.co.uk
+            </a>
+          </p>
+
+          <!-- Website -->
+          <p class="flex items-center text-gray-400">
+            <svg
+              class="h-5 w-5 text-white mr-2"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C6.5 2 2 6.5 2 12s4.5 10 
+      10 10 10-4.5 10-10S17.5 2 12 2zm0 
+      18c-4.4 0-8-3.6-8-8s3.6-8 
+      8-8 8 3.6 8 8-3.6 8-8 8zm.5-13h-1v6l5.2 
+      3.1.5-.9-4.7-2.8V7z"
+              />
+            </svg>
+            <a
+              href="http://www.berwickmanorlounge.co.uk"
+              target="_blank"
+              class="hover:text-white"
+            >
+              www.berwickmanorlounge.co.uk
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-500">
+        <p>© 2025 Berwick Manor. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Fade-in animation
+      window.addEventListener("load", () =>
+        document.body.classList.add("loaded")
+      );
+
+      // Mobile menu toggle
+      const toggleBtn = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      toggleBtn.addEventListener("click", () => {
+        if (mobileMenu.classList.contains("hidden")) {
+          // Show menu with animation
+          mobileMenu.classList.remove("hidden");
+          setTimeout(() => {
+            mobileMenu.classList.remove("opacity-0", "-translate-y-5");
+          }, 10); // Delay for transition
+        } else {
+          // Hide menu with animation
+          mobileMenu.classList.add("opacity-0", "-translate-y-5");
+          mobileMenu.addEventListener(
+            "transitionend",
+            () => {
+              mobileMenu.classList.add("hidden");
+            },
+            { once: true }
+          );
+        }
+      });
+      // Mobile card functionality - ADDED THIS SECTION
+      document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll(".card");
+
+        // For touch devices
+        cards.forEach((card) => {
+          card.addEventListener("touchstart", function () {
+            // Remove active class from all cards
+            cards.forEach((c) => c.classList.remove("active"));
+            // Add active class to clicked card
+            this.classList.add("active");
+          });
+
+          // For desktop hover
+          card.addEventListener("mouseenter", function () {
+            this.classList.add("active");
+          });
+
+          card.addEventListener("mouseleave", function () {
+            this.classList.remove("active");
+          });
+        });
+
+        // Close card when clicking outside on mobile
+        document.addEventListener("touchstart", function (e) {
+          if (!e.target.closest(".card")) {
+            cards.forEach((card) => {
+              card.classList.remove("active");
+            });
+          }
+        });
+      });
+    </script>
+
+    <script>
+      AOS.init({
+        duration: 800,
+        once: false,
+        offset: 50,
+      });
+    </script>
+  </body>
+</html>

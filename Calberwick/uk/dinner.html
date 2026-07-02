@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Dinner- Berwick Manor</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#d46211",
+              "background-light": "#f8f7f6",
+              "background-dark": "#221810",
+            },
+            fontFamily: {
+              display: ["Epilogue"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-background-dark bg-black font-display text-gray-800 dark:text-gray-200"
+  >
+    <div class="relative flex h-auto min-h-screen w-full flex-col">
+      <!-- Header -->
+      <header class="relative w-full z-20 bg-black">
+        <div class="container mx-auto px-4">
+          <div
+            class="flex items-center justify-between py-4 border-b border-stone-200/10 dark:border-stone-800"
+          >
+            <a class="flex items-center gap-2" href="index.html">
+              <img class="h-12 w-12" src="images/Logo orange.png" alt="Logo" />
+              <h2 class="text-xl font-bold text-white">Berwick Manor</h2>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-white">
+              <a
+                class="text-sm font-medium hover:text-primary"
+                href="index.html"
+                >Home</a
+              ><a
+                class="text-sm font-medium hover:text-primary"
+                href="menu.html"
+                >Menu</a
+              >
+
+              <a
+                class="text-sm font-medium hover:text-primary"
+                href="gallery.html"
+                >Gallery</a
+              >
+              <a
+                class="text-sm font-medium hover:text-primary"
+                href="reservations.html"
+                >Contact</a
+              >
+            </nav>
+            <div class="flex items-center gap-4">
+              <a
+                class="border px-12 py-2 text-sm font-bold shadow-lg transition-all hover:bg-[#F7941D]"
+                href="reservations.html"
+                style="border-color: #f7941d"
+              >
+                Book Now
+              </a>
+
+              <button id="menuToggle" class="md:hidden p-2">
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 6h16M4 12h16m-7 6h7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav
+        id="mobileMenu"
+        class="md:hidden hidden bg-black text-white p-6 space-y-4 absolute top-[72px] left-0 w-full z-30 transition-all duration-300 ease-in-out transform opacity-0 -translate-y-5"
+      >
+        <a
+          class="block text-sm font-medium hover:text-primary"
+          href="index.html"
+          >Home</a
+        >
+        <a class="block text-sm font-medium hover:text-primary" href="menu.html"
+          >Menu</a
+        >
+
+        <a
+          class="block text-sm font-medium hover:text-primary"
+          href="gallery.html"
+          >Gallery</a
+        >
+        <a
+          class="block text-sm font-medium hover:text-primary"
+          href="reservations.html"
+          >Contact</a
+        >
+      </nav>
+      <!-- Hero Section -->
+      <section
+        class="relative h-[70vh] flex items-center justify-center text-center"
+        style="
+          background-image: url('img/e.jpg');
+          background-size: cover;
+          background-position: center;
+        "
+        data-aos="fade-up"
+      >
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-3xl px-6">
+          <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-4">
+            Dinner
+          </h1>
+          <p class="text-lg md:text-xl text-gray-200">
+            Exquisite flavors for your special evenings
+          </p>
+        </div>
+      </section>
+      <!-- Content -->
+      <main class="flex flex-1 justify-center py-10 sm:py-16">
+        <div class="w-full max-w-6xl px-4 sm:px-6" data-aos="fade-up">
+          <h2
+            class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center"
+          >
+            To Start
+          </h2>
+          <p
+            class="mt-4 text-center text-lg text-gray-600 dark:text-gray-400"
+            data-aos="fade-up"
+          >
+            Exquisite flavors for your special evenings
+          </p>
+
+          <div class="mt-12 grid gap-8 md:grid-cols-2">
+            <!-- Item -->
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+              data-aos="fade-up"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/calamari.jpg"
+                  alt="Berwick Manor Breakfast"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Crispy Calamari
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Fresh squid rings with garlic mayo dip
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £11.00
+                </p>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+              data-aos="fade-up"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/hummus.jpg"
+                  alt="Classic Pancakes"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Hummus & Tomato Bruschetta (VE)
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Balsamic roasted tomato and red onion, homemade lemon and
+                    cilantro hummus served with sourdough
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £7.00
+                </p>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+              data-aos="fade-up"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/prawns.jpg"
+                  alt="Eggs Royale"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    King Prawns
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Pan-seard king prawns with a fresh chlli, garlic and herb
+                    butter.
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £14.00
+                </p>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div
+              class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+              data-aos="fade-up"
+            >
+              <div class="md:w-1/3 overflow-hidden">
+                <img
+                  src="images/wings.jpg"
+                  alt="Strawberry Delight"
+                  class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div class="flex-1 p-6 flex flex-col justify-between">
+                <div>
+                  <h3
+                    class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                  >
+                    Berwick Chicken Wings
+                  </h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Choice of BBQ or Jerk sauce marinade
+                  </p>
+                </div>
+                <p
+                  class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+                >
+                  £10.00
+                </p>
+              </div>
+            </div>
+
+            <!-- Little Ones Section -->
+          </div>
+        </div>
+      </main>
+      <div class="w-full max-w-6xl mx-auto px-4 sm:px-6" data-aos="fade-up">
+        <h3
+          class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center"
+        >
+          Mains
+        </h3>
+        <p class="mt-4 text-center text-lg text-gray-600 dark:text-gray-400">
+          Main Dishes
+        </p>
+
+        <div class="mt-12 grid gap-8 md:grid-cols-2">
+          <!-- Item -->
+          <div
+            class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            data-aos="fade-up"
+          >
+            <div class="md:w-1/3 overflow-hidden">
+              <img
+                src="images/ships.webp"
+                alt="Kids Breakfast"
+                class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="flex-1 p-6 flex flex-col justify-between">
+              <div>
+                <h3
+                  class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                >
+                  Fish &Chips
+                </h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  Freshly battered haddock. Served with chips,, mushy peas and
+                  Tartar sauce
+                </p>
+              </div>
+              <p
+                class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+              >
+                £17.00
+              </p>
+            </div>
+          </div>
+
+          <!-- Add more little ones items -->
+          <div
+            class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            data-aos="fade-up"
+          >
+            <div class="md:w-1/3 overflow-hidden">
+              <img
+                src="images/seabass.webp"
+                alt="Spaghetti Bolognaise"
+                class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="flex-1 p-6 flex flex-col justify-between">
+              <div>
+                <h3
+                  class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                >
+                  Seabass
+                </h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  Pan-seared seabass on bed of crushed ne potatoes, butter sauce
+                  and dill oil.
+                </p>
+              </div>
+              <p
+                class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+              >
+                £16.00
+              </p>
+            </div>
+          </div>
+
+          <!-- Chips & Fish Fingers -->
+          <div
+            class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            data-aos="fade-up"
+          >
+            <div class="md:w-1/3 overflow-hidden">
+              <img
+                src="images/lamb.webp"
+                alt="Chips and Fish Fingers"
+                class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="flex-1 p-6 flex flex-col justify-between">
+              <div>
+                <h3
+                  class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                >
+                  Lamb Chops
+                </h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  Grilled lamb chops with fresh mint sauce.
+                </p>
+              </div>
+              <p
+                class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+              >
+                £14.90
+              </p>
+            </div>
+          </div>
+
+          <!-- Chips & Nuggets -->
+        </div>
+      </div>
+      <br /><br />
+      <div class="w-full max-w-6xl mx-auto px-4 sm:px-6" data-aos="fade-up">
+        <h3
+          class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center"
+        >
+          Pasta
+        </h3>
+        <p class="mt-4 text-center text-lg text-gray-600 dark:text-gray-400">
+          Special pasta meals
+        </p>
+
+        <div class="mt-12 grid gap-8 md:grid-cols-2">
+          <!-- Item -->
+          <div
+            class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            data-aos="fade-up"
+          >
+            <div class="md:w-1/3 overflow-hidden">
+              <img
+                src="images/penne.webp"
+                alt="Kids Breakfast"
+                class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="flex-1 p-6 flex flex-col justify-between">
+              <div>
+                <h3
+                  class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                >
+                  Penne Pamodoro
+                </h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  Classic tomato sauce with garlic and fresh basil
+                </p>
+              </div>
+              <p
+                class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+              >
+                £14.00
+              </p>
+            </div>
+          </div>
+
+          <!-- Add more little ones items -->
+          <div
+            class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            data-aos="fade-up"
+          >
+            <div class="md:w-1/3 overflow-hidden">
+              <img
+                src="images/truffle.jpg"
+                alt="Spaghetti Bolognaise"
+                class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="flex-1 p-6 flex flex-col justify-between">
+              <div>
+                <h3
+                  class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                >
+                  Penne Wild Mushroom, Spinach & Black Truffle Oil
+                </h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  Wild mushrooms, fresh, black truffle oil and parmesan.
+                </p>
+              </div>
+              <p
+                class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+              >
+                £16.50
+              </p>
+            </div>
+          </div>
+
+          <!-- Chips & Fish Fingers -->
+          <div
+            class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            data-aos="fade-up"
+          >
+            <div class="md:w-1/3 overflow-hidden">
+              <img
+                src="images/bolognaise.jpg"
+                alt="Chips and Fish Fingers"
+                class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="flex-1 p-6 flex flex-col justify-between">
+              <div>
+                <h3
+                  class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+                >
+                  Spaggehti Bolognaise
+                </h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  Locally sourced minced beef, rich tomato ragu and aged
+                  parmesan.
+                </p>
+              </div>
+              <p
+                class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+              >
+                £14.00
+              </p>
+            </div>
+          </div>
+
+          <!-- Chips & Nuggets -->
+        </div>
+      </div>
+      <br />
+      <br />
+      <!-- Sides Section -->
+      <div class="w-full max-w-6xl mx-auto px-4 sm:px-6">
+        <h2
+          class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center"
+          data-aos="fade-up"
+        >
+          Burgers & Grills
+        </h2>
+
+        <div class="mt-12 grid gap-8 md:grid-cols-2">
+          <!-- Home Made Beans -->
+          <div
+            class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            data-aos="fade-up"
+          >
+            <div class="md:w-1/3 overflow-hidden">
+              <img
+                src="images/burger.jpg"
+                alt="Home Made Beans"
+                class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="flex-1 p-6 flex flex-col justify-between">
+              <h3
+                class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+              >
+                Beef Burger
+              </h3>
+              <p
+                class="mt-4 text-left text-lg text-gray-600 dark:text-gray-400"
+              >
+                Prime beef patty,smoked rashers,aged cheddar, pickled onion,
+                gherkin, signature sauce, hand-cut fries
+              </p>
+              <p
+                class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+              >
+                £15.00
+              </p>
+            </div>
+          </div>
+
+          <!-- Sausage or Turkey Rashers -->
+          <div
+            class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            data-aos="fade-up"
+          >
+            <div class="md:w-1/3 overflow-hidden">
+              <img
+                src="images/steak.jpg"
+                alt="Sausage or Turkey Rashers"
+                class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="flex-1 p-6 flex flex-col justify-between">
+              <h3
+                class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+              >
+                Bavette Steak
+              </h3>
+              <p
+                class="mt-4 text-left text-lg text-gray-600 dark:text-gray-400"
+              >
+                Char-grilled bavette,chimvhurri, seasonal house salad,
+                triple-cooked chips
+              </p>
+              <p
+                class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+              >
+                £16.5
+              </p>
+            </div>
+          </div>
+
+          <!-- Fries -->
+          <div
+            class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            data-aos="fade-up"
+          >
+            <div class="md:w-1/3 overflow-hidden">
+              <img
+                src="images/cajun.jpg"
+                alt="Fries"
+                class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="flex-1 p-6 flex flex-col justify-between">
+              <h3
+                class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+              >
+                Cajun Chicken Burger
+              </h3>
+              <p
+                class="mt-4 text-left text-lg text-gray-600 dark:text-gray-400"
+              >
+                Grilled chicken breast, Cajun mayo, carmalized onion chtney,
+                tomato, mature cheddar, hand-cut fries
+              </p>
+              <p
+                class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+              >
+                £15.00
+              </p>
+            </div>
+          </div>
+
+          <!-- Add more sides in the same format -->
+        </div>
+        <br /><br />
+        <h2
+          class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center"
+          data-aos="fade-up"
+        >
+          Sides
+        </h2>
+
+        <div class="mt-12 grid gap-8 md:grid-cols-2">
+          <!-- Home Made Beans -->
+          <div
+            class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            data-aos="fade-up"
+          >
+            <div class="md:w-1/3 overflow-hidden">
+              <img
+                src="images/fries.jpg"
+                alt="Home Made Beans"
+                class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="flex-1 p-6 flex flex-col justify-between">
+              <h3
+                class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+              >
+                French Fries
+              </h3>
+
+              <p
+                class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+              >
+                £4.00
+              </p>
+            </div>
+          </div>
+
+          <!-- Sausage or Turkey Rashers -->
+          <div
+            class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            data-aos="fade-up"
+          >
+            <div class="md:w-1/3 overflow-hidden">
+              <img
+                src="images/fries2.jpg"
+                alt="Sausage or Turkey Rashers"
+                class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="flex-1 p-6 flex flex-col justify-between">
+              <h3
+                class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+              >
+                Triple Cooked Chips
+              </h3>
+
+              <p
+                class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+              >
+                £4.00
+              </p>
+            </div>
+          </div>
+
+          <!-- Fries -->
+          <div
+            class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            data-aos="fade-up"
+          >
+            <div class="md:w-1/3 overflow-hidden">
+              <img
+                src="images/rice.jpg"
+                alt="Fries"
+                class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="flex-1 p-6 flex flex-col justify-between">
+              <h3
+                class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+              >
+                Rice
+              </h3>
+
+              <p
+                class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+              >
+                £3.50
+              </p>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            data-aos="fade-up"
+          >
+            <div class="md:w-1/3 overflow-hidden">
+              <img
+                src="images/aspen.jpg"
+                alt="Fries"
+                class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="flex-1 p-6 flex flex-col justify-between">
+              <h3
+                class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+              >
+                Aspen Fries
+              </h3>
+
+              <p
+                class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+              >
+                £6.50
+              </p>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            data-aos="fade-up"
+          >
+            <div class="md:w-1/3 overflow-hidden">
+              <img
+                src="images/noewpot.jpeg"
+                alt="Fries"
+                class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="flex-1 p-6 flex flex-col justify-between">
+              <h3
+                class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+              >
+                New Potatoes
+              </h3>
+
+              <p
+                class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+              >
+                £4.00
+              </p>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            data-aos="fade-up"
+          >
+            <div class="md:w-1/3 overflow-hidden">
+              <img
+                src="images/brocollini.jpg"
+                alt="Fries"
+                class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="flex-1 p-6 flex flex-col justify-between">
+              <h3
+                class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+              >
+                Brocollini
+              </h3>
+
+              <p
+                class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+              >
+                £4.50
+              </p>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+            data-aos="fade-up"
+          >
+            <div class="md:w-1/3 overflow-hidden">
+              <img
+                src="images/spinach.avif"
+                alt="Fries"
+                class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div class="flex-1 p-6 flex flex-col justify-between">
+              <h3
+                class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+              >
+                Creamy Spinach Ca
+              </h3>
+
+              <p
+                class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+              >
+                £4.00
+              </p>
+            </div>
+          </div>
+          <!-- Add more sides in the same format -->
+        </div>
+      </div>
+    </div>
+    <br /><br />
+    <div class="w-full max-w-6xl mx-auto px-4 sm:px-6" data-aos="fade-up">
+      <h3
+        class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center"
+      >
+        Desserts
+      </h3>
+
+      <div class="mt-12 grid gap-8 md:grid-cols-2">
+        <!-- Item -->
+        <div
+          class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+          data-aos="fade-up"
+        >
+          <div class="md:w-1/3 overflow-hidden">
+            <img
+              src="images/toffee.jpg"
+              alt="Kids Breakfast"
+              class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+            />
+          </div>
+          <div class="flex-1 p-6 flex flex-col justify-between">
+            <div>
+              <h3
+                class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+              >
+                Sticky Toffee Pudding
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                Classic, housemade sticky toffee pudding served with vanilla ice
+                cream.
+              </p>
+            </div>
+            <p
+              class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+            >
+              £10.50
+            </p>
+          </div>
+        </div>
+
+        <!-- Add more little ones items -->
+        <div
+          class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+          data-aos="fade-up"
+        >
+          <div class="md:w-1/3 overflow-hidden">
+            <img
+              src="images/brownie.jpg"
+              alt="Spaghetti Bolognaise"
+              class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+            />
+          </div>
+          <div class="flex-1 p-6 flex flex-col justify-between">
+            <div>
+              <h3
+                class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+              >
+                Brownie
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                Rich, warm chocolate brownie served with vanilla ice cream.
+              </p>
+            </div>
+            <p
+              class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+            >
+              £11.00
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div class="w-full max-w-6xl mx-auto px-4 sm:px-6" data-aos="fade-up">
+      <h3
+        class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center"
+      >
+        Small Plates
+      </h3>
+
+      <div class="mt-12 grid gap-8 md:grid-cols-2">
+        <!-- Item -->
+        <div
+          class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+          data-aos="fade-up"
+        >
+          <div class="md:w-1/3 overflow-hidden">
+            <img
+              src="images/sliders.jpg"
+              alt="Kids Breakfast"
+              class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+            />
+          </div>
+          <div class="flex-1 p-6 flex flex-col justify-between">
+            <div>
+              <h3
+                class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+              >
+                Beef Sliders (4)
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                Mini beef patties, signature sauce, pickled onions
+              </p>
+            </div>
+            <p
+              class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+            >
+              £12.50
+            </p>
+          </div>
+        </div>
+
+        <!-- Add more little ones items -->
+        <div
+          class="group flex flex-col md:flex-row bg-white dark:bg-stone-900 rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+          data-aos="fade-up"
+        >
+          <div class="md:w-1/3 overflow-hidden">
+            <img
+              src="images/vegsliders.jpg"
+              alt="Spaghetti Bolognaise"
+              class="h-48 w-full object-cover md:h-full group-hover:scale-110 transition duration-500"
+            />
+          </div>
+          <div class="flex-1 p-6 flex flex-col justify-between">
+            <div>
+              <h3
+                class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+              >
+                Plant Sliders (4)
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                Mini beef patties, signature sauce, pickled onions
+              </p>
+            </div>
+            <p
+              class="mt-4 text-lg font-semibold text-primary self-end md:self-start"
+            >
+              £12.00
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br /><br />
+    <div class="mt-12 text-center">
+      <a
+        href="menu.php"
+        class="text-primary font-semibold hover:underline"
+        style="color: #f7941d"
+      >
+        ← Back to Menu
+      </a>
+    </div>
+    <br />
+    <br />
+    <footer class="bg-black text-white py-12 px-6 md:px-12">
+      <div
+        class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left"
+      >
+        <!-- Logo + Intro -->
+        <div>
+          <img
+            alt="Berwick Manor Logo"
+            class="h-12 w-12 md:h-14 md:w-14"
+            src="images/Logo white.png"
+          />
+          <br />
+          <h3 class="text-xl font-bold mb-4" style="color: #f7941d">
+            Berwick Manor
+          </h3>
+          <p class="text-gray-400">
+            Experience dining and shisha in a luxurious and unforgettable
+            setting.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-bold mb-4" style="color: #f7941d">
+            Quick Links
+          </h3>
+          <ul class="space-y-2">
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition-colors duration-300"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition-colors duration-300"
+                href="menu.html"
+                >Menu</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition-colors duration-300"
+                href="gallery.html"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition-colors duration-300"
+                href="reservations.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-xl font-bold mb-4" style="color: #f7941d">
+            Contact Info
+          </h3>
+
+          <!-- Location -->
+          <p class="flex items-start text-gray-400 mb-2">
+            <svg
+              class="h-5 w-5 text-white mr-2 mt-1"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C8.1 2 5 5.1 5 9c0 5.3 7 13 7 13s7-7.7 7-13c0-3.9-3.1-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5s2.5 1.1 2.5 2.5S13.4 11.5 12 11.5z"
+              />
+            </svg>
+            Berwick Manor Restaurant and Shisha Lounge, <br />
+            Berwick Pond Road, Rainham RM13 9EL
+          </p>
+
+          <!-- Email -->
+          <p class="flex items-center text-gray-400 mb-2">
+            <svg
+              class="h-5 w-5 text-white mr-2"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 
+      2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 
+      4-8 5-8-5V6l8 5 8-5v2z"
+              />
+            </svg>
+            <a
+              href="mailto:info@berwickmanorlounge.co.uk"
+              class="hover:text-white"
+            >
+              info@berwickmanorlounge.co.uk
+            </a>
+          </p>
+
+          <!-- Website -->
+          <p class="flex items-center text-gray-400">
+            <svg
+              class="h-5 w-5 text-white mr-2"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C6.5 2 2 6.5 2 12s4.5 10 
+      10 10 10-4.5 10-10S17.5 2 12 2zm0 
+      18c-4.4 0-8-3.6-8-8s3.6-8 
+      8-8 8 3.6 8 8-3.6 8-8 8zm.5-13h-1v6l5.2 
+      3.1.5-.9-4.7-2.8V7z"
+              />
+            </svg>
+            <a
+              href="http://www.berwickmanorlounge.co.uk"
+              target="_blank"
+              class="hover:text-white"
+            >
+              www.berwickmanorlounge.co.uk
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-500">
+        <p>© 2025 Berwick Manor. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script>
+      const carousel = document.getElementById("menu-carousel");
+      const prevButton = document.querySelector(".carousel-prev");
+      const nextButton = document.querySelector(".carousel-next");
+      nextButton.addEventListener("click", () => {
+        const cardWidth = carousel.querySelector("div").offsetWidth;
+        carousel.scrollBy({ left: cardWidth + 32, behavior: "smooth" }); // 32 is for the space-x-8
+      });
+      prevButton.addEventListener("click", () => {
+        const cardWidth = carousel.querySelector("div").offsetWidth;
+        carousel.scrollBy({ left: -(cardWidth + 32), behavior: "smooth" });
+      });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: false,
+        offset: 50,
+      });
+    </script>
+    <script>
+      const toggleBtn = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      toggleBtn.addEventListener("click", () => {
+        if (mobileMenu.classList.contains("hidden")) {
+          // show menu with animation
+          mobileMenu.classList.remove("hidden");
+          setTimeout(() => {
+            mobileMenu.classList.remove("opacity-0", "-translate-y-5");
+          }, 10); // tiny delay so transition applies
+        } else {
+          // hide menu with animation
+          mobileMenu.classList.add("opacity-0", "-translate-y-5");
+          mobileMenu.addEventListener(
+            "transitionend",
+            () => {
+              mobileMenu.classList.add("hidden");
+            },
+            { once: true }
+          );
+        }
+      });
+    </script>
+  </body>
+</html>

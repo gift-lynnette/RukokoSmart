@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Berwick Manor Menu</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#F7941D",
+              "background-light": "#f8f7f6",
+              "background-dark": "#000",
+            },
+            fontFamily: {
+              display: ["Epilogue"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #f7941d; /* Orange theme */
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+      .swiper-button-next:hover,
+      .swiper-button-prev:hover {
+        color: white;
+        transform: scale(1.2);
+      }
+      
+  /* Existing styles above ... */
+/* Image slides in faster */
+@keyframes imageSlideIn {
+  0% {
+    transform: translateX(150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Border slides slower, starts farther right */
+@keyframes borderSlideIn {
+  0% {
+    transform: translateX(250px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply animations */
+.image-slide {
+  animation: imageSlideIn 1s ease-out forwards;
+}
+
+.border-follow {
+  animation: borderSlideIn 1.6s ease-in-out 0.3s forwards;
+  
+}
+
+
+</style>
+
+    
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body class="font-display bg-background-dark text-stone-200">
+    <!-- Header -->
+    <!-- Navbar (inside hero) -->
+    <header
+      class="relative top-0 left-0 w-full z-20 bg-transparent backdrop-blur-sm"
+    >
+      <div class="container mx-auto px-4">
+        <div
+          class="flex items-center justify-between py-4 border-b border-stone-200/10 dark:border-stone-800"
+        >
+          <a class="flex items-center gap-2" href="index.html">
+            <img class="h-12 w-12" src="images/Logo orange.png" alt="Logo" />
+            <h2 class="text-xl font-bold text-white">Berwick Manor</h2>
+          </a>
+          <nav class="hidden md:flex items-center gap-6 text-white">
+            <a class="text-sm font-medium hover:text-primary" href="index.html"
+              >Home</a
+            ><a class="text-sm font-medium hover:text-primary" href="menu.html"
+              >Menu</a
+            >
+            
+            <a
+              class="text-sm font-medium hover:text-primary"
+              href="gallery.html"
+              >Gallery</a
+            >
+            <a
+              class="text-sm font-medium hover:text-primary"
+              href="reservations.html"
+              >Contact</a
+            >
+          </nav>
+          <div class="flex items-center gap-4">
+            <a
+              class="border px-12 py-2 text-sm font-bold shadow-lg transition-all hover:bg-[#F7941D]"
+              href="reservations.html"
+              style="border-color: #f7941d"
+            >
+              Book Now
+            </a>
+
+            <button id="menuToggle" class="md:hidden p-2">
+              <svg
+                class="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 6h16M4 12h16m-7 6h7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav
+      id="mobileMenu"
+      class="md:hidden hidden bg-black text-white p-6 space-y-4 absolute top-[72px] left-0 w-full z-30 transition-all duration-300 ease-in-out transform opacity-0 -translate-y-5"
+    >
+      <a class="block text-sm font-medium hover:text-primary" href="index.html"
+        >Home</a
+      >
+      <a class="block text-sm font-medium hover:text-primary" href="menu.html"
+        >Menu</a
+      >
+      
+      <a
+        class="block text-sm font-medium hover:text-primary"
+        href="gallery.html"
+        >Gallery</a
+      >
+      <a
+        class="block text-sm font-medium hover:text-primary"
+        href="reservations.html"
+        >Contact</a
+      >
+    </nav>
+
+    <section class="bg-black text-white py-16 relative overflow-hidden">
+      <div class="text-center mb-12">
+        <p class="italic text-lg text-gray-300">Our Gallery</p>
+        <h2 class="text-4xl font-bold">OUR SPECIAL MOMENTS</h2>
+      </div>
+
+      <!-- Swiper Container -->
+      <div class="swiper tranding-slider max-w-4xl mx-auto">
+        <div class="swiper-wrapper">
+          <!-- Item 1 -->
+         <div class="swiper-slide flex justify-center items-center">
+           <div class="relative">
+             <img
+                src="png/i.png"
+                alt="Lamb Chops"
+                class="w-40 md:w-[500px] lg:w-[400px] rounded-full object-cover image-slide"
+              />
+            <!-- Border is separate, not covering the image yet -->
+            <div
+             class="absolute top-0 left-0 w-full h-full rounded-full border-[5px] border-[#5f5e5eff] border-follow"
+             ></div>
+           </div>
+         </div>
+
+
+          <!-- Item 2 -->
+
+          <div class="swiper-slide relative flex justify-center items-center">
+  <!-- Border that follows the image -->
+            <div class="border-follow absolute rounded-full border-[5px] border-primary w-40 h-40 md:w-[500px] md:h-[500px] lg:w-[400px] lg:h-[400px]" style="border-color: #5f5e5eff;"></div>
+
+  <!-- Image that slides in -->
+              <img
+             src="png/h.png"
+             alt="Gallery Item 2"
+             class="image-slide rounded-full mx-auto w-40 h-40 md:w-[500px] md:h-[500px] lg:w-[400px] lg:h-[400px]"
+            />
+          </div>
+
+
+          <!-- Item 3 -->
+          <div class="swiper-slide relative flex justify-center items-center">
+  <!-- Border -->
+              <div class="border-follow absolute rounded-full border-[5px] border-primary w-40 h-40 md:w-[200px] md:h-[200px] lg:w-[400px] lg:h-[400px]" style="border-color:  #5f5e5eff;"></div>
+               <!-- Image -->
+               <img src="png/g.png" alt="Gallery Item 3" class="image-slide rounded-full mx-auto w-40 h-40 md:w-[200px] md:h-[200px] lg:w-[400px] lg:h-[400px]" />
+              </div>
+
+          <div class="swiper-slide relative flex justify-center items-center">
+           <div class="border-follow absolute rounded-full border-[5px] border-primary w-40 h-40 md:w-[200px] md:h-[200px] lg:w-[400px] lg:h-[400px] " style="border-color:  #5f5e5eff;"></div>
+            <img src="png/f.png" alt="Gallery Item 4" class="image-slide rounded-full mx-auto w-40 h-40 md:w-[200px] md:h-[200px] lg:w-[400px] lg:h-[400px]" />
+          </div>
+
+          <div class="swiper-slide relative flex justify-center items-center">
+           <div class="border-follow absolute rounded-full border-[5px] border-primary w-40 h-40 md:w-[200px] md:h-[200px] lg:w-[400px] lg:h-[400px] " style="border-color:  #5f5e5eff;"></div>
+            <img src="png/e.png" alt="Gallery Item 5" class="image-slide rounded-full mx-auto w-40 h-40 md:w-[200px] md:h-[200px] lg:w-[400px] lg:h-[400px]" />
+          </div>
+
+          <div class="swiper-slide relative flex justify-center items-center">
+            <div class="border-follow absolute rounded-full border-[5px] border-primary w-40 h-40 md:w-[200px] md:h-[200px] lg:w-[400px] lg:h-[400px] " style="border-color:  #5f5e5eff;"></div>
+              <img src="png/d.png" alt="Gallery Item 6" class="image-slide rounded-full mx-auto w-40 h-40 md:w-[200px] md:h-[200px] lg:w-[400px] lg:h-[400px] "  />
+            </div>
+
+          <div class="swiper-slide relative flex justify-center items-center">
+            <div class="border-follow absolute rounded-full border-[5px] border-primary w-40 h-40 md:w-[200px] md:h-[200px] lg:w-[400px] lg:h-[400px]" style="border-color:  #5f5e5eff;"></div>
+             <img src="png/b.png" alt="Gallery Item 7" class="image-slide rounded-full mx-auto w-40 h-40 md:w-[200px] md:h-[200px] lg:w-[370px] lg:h-[370px] object-cover" />
+          </div>
+
+          <div class="swiper-slide relative flex justify-center items-center">
+            <div class="border-follow absolute rounded-full border-[5px] border-primary w-40 h-40 md:w-[200px] md:h-[200px] lg:w-[400px] lg:h-[400px] " style="border-color:  #5f5e5eff;"></div>
+             <img src="png/a.png" alt="Gallery Item 8" class="image-slide rounded-full mx-auto w-40 h-40 md:w-[200px] md:h-[200px] lg:w-[400px] lg:h-[400px]" />
+          </div>
+
+
+       </section>
+<section>
+    <div class="bg-black text-white py-12 px-6 md:px-12">
+      <div
+        class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left"
+      >
+        <!-- Logo + Intro -->
+        <div>
+          <img
+            alt="Berwick Manor Logo"
+            class="h-12 w-12 md:h-14 md:w-14"
+            src="images/Logo white.png"
+          />
+          <br />
+          <h3 class="text-xl font-bold mb-4" style="color: #f7941d">
+            Berwick Manor
+          </h3>
+          <p class="text-gray-400">
+            Experience dining and shisha in a luxurious and unforgettable
+            setting.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-bold mb-4" style="color: #f7941d">
+            Quick Links
+          </h3>
+          <ul class="space-y-2">
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition-colors duration-300"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition-colors duration-300"
+                href="menu.html"
+                >Menu</a
+              >
+            </li>
+            
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition-colors duration-300"
+                href="gallery.html"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-gray-400 hover:text-white transition-colors duration-300"
+                href="reservations.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-xl font-bold mb-4" style="color: #f7941d">
+            Contact Info
+          </h3>
+
+          <!-- Location -->
+          <p class="flex items-start text-gray-400 mb-2">
+            <svg
+              class="h-5 w-5 text-white mr-2 mt-1"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C8.1 2 5 5.1 5 9c0 5.3 7 13 7 13s7-7.7 7-13c0-3.9-3.1-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5s2.5 1.1 2.5 2.5S13.4 11.5 12 11.5z"
+              />
+            </svg>
+            Berwick Manor Restaurant and Shisha Lounge, <br />
+            Berwick Pond Road, Rainham RM13 9EL
+          </p>
+
+          <!-- Email -->
+          <p class="flex items-center text-gray-400 mb-2">
+            <svg
+              class="h-5 w-5 text-white mr-2"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 
+      2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 
+      4-8 5-8-5V6l8 5 8-5v2z"
+              />
+            </svg>
+            <a
+              href="mailto:info@berwickmanorlounge.co.uk"
+              class="hover:text-white"
+            >
+              info@berwickmanorlounge.co.uk
+            </a>
+          </p>
+
+          <!-- Website -->
+          <p class="flex items-center text-gray-400">
+            <svg
+              class="h-5 w-5 text-white mr-2"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C6.5 2 2 6.5 2 12s4.5 10 
+      10 10 10-4.5 10-10S17.5 2 12 2zm0 
+      18c-4.4 0-8-3.6-8-8s3.6-8 
+      8-8 8 3.6 8 8-3.6 8-8 8zm.5-13h-1v6l5.2 
+      3.1.5-.9-4.7-2.8V7z"
+              />
+            </svg>
+            <a
+              href="http://www.berwickmanorlounge.co.uk"
+              target="_blank"
+              class="hover:text-white"
+            >
+              www.berwickmanorlounge.co.uk
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+   
+
+      <!-- Bottom -->
+      <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-500">
+        <p>© 2025 Berwick Manor. All Rights Reserved.</p>
+      </div>
+    </footer>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // AOS Init
+      AOS.init({
+        duration: 800,
+        once: false,
+        offset: 50,
+      });
+    </script>
+
+    <script>
+      var TrandingSlider = new Swiper(".tranding-slider", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        loop: true,
+        slidesPerView: "auto",
+        speed: 1000,
+        coverflowEffect: {
+          rotate: 0, // no tilt
+          stretch: 0, // keep slides aligned
+          depth: 300, // increase depth for smaller sides
+          modifier: 3, // exaggerates scaling difference
+          slideShadows: false,
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script>
+      const toggleBtn = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      toggleBtn.addEventListener("click", () => {
+        if (mobileMenu.classList.contains("hidden")) {
+          // show menu with animation
+          mobileMenu.classList.remove("hidden");
+          setTimeout(() => {
+            mobileMenu.classList.remove("opacity-0", "-translate-y-5");
+          }, 10); // tiny delay so transition applies
+        } else {
+          // hide menu with animation
+          mobileMenu.classList.add("opacity-0", "-translate-y-5");
+          mobileMenu.addEventListener(
+            "transitionend",
+            () => {
+              mobileMenu.classList.add("hidden");
+            },
+            { once: true }
+          );
+        }
+      });
+    </script>
+    <script>
+  var TrandingSlider = new Swiper(".tranding-slider", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: "auto",
+    speed: 2000,
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 300,
+      modifier: 3,
+      slideShadows: false,
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  // Reset animation on active slide so image + border animate each time
+  TrandingSlider.on('slideChangeTransitionStart', function () {
+    const slides = document.querySelectorAll(
+      '.swiper-slide-active .image-slide, .swiper-slide-active .border-follow'
+    );
+    slides.forEach(el => {
+      el.style.animation = 'none';
+      void el.offsetWidth; // trigger reflow
+      el.style.animation = ''; // restart animation
+    });
+  });
+</script>
+
+  </body>
+</html>
